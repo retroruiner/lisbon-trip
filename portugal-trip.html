@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇵🇹 Поездка в Португалию</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #F5F0E8;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+/* ─── HEADER ─── */
+.header {
+  background: #1E2D3D;
+  padding: 20px 24px;
+}
+
+.header-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.header-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.header-pill {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ─── TAB BAR ─── */
+.tabbar {
+  background: #ffffff;
+  border-bottom: 2px solid #e5ddd0;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.tabbar::-webkit-scrollbar { display: none; }
+
+.tab {
+  flex-shrink: 0;
+  padding: 14px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #888;
+  background: #ffffff;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tab:hover { color: #C4673A; }
+
+.tab.active {
+  color: #C4673A;
+  border-bottom-color: #C4673A;
+  font-weight: 600;
+}
+
+/* ─── PANELS ─── */
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* ─── CONTENT WRAPPER ─── */
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 16px 60px;
+}
+
+/* ─── SECTION HEADER ─── */
+.sec-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #C4673A;
+  margin-bottom: 6px;
+}
+
+.sec-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1E2D3D;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.sec-title em {
+  font-style: italic;
+  color: #C4673A;
+}
+
+/* ─── ALERT ─── */
+.alert {
+  background: #FEF3CD;
+  border: 1px solid #e8c97a;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #7a5a1a;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  display: flex;
+  gap: 10px;
+}
+
+/* ─── DIVIDER ─── */
+.divider {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin: 28px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ddd5c8;
+}
+
+/* ─── PLACE CARDS GRID ─── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+.card-top {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 48px;
+}
+
+.bg1 { background: linear-gradient(135deg, #e8eef5, #c8d8e8); }
+.bg2 { background: linear-gradient(135deg, #f5e8e0, #e8c4a8); }
+.bg3 { background: linear-gradient(135deg, #f5f0e0, #e8d898); }
+.bg4 { background: linear-gradient(135deg, #e4eee5, #b8d0bc); }
+.bg5 { background: linear-gradient(135deg, #f0e8f0, #d8b8d8); }
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.b-red   { background: #C4673A; color: #fff; }
+.b-green { background: #5a8f62; color: #fff; }
+.b-navy  { background: #1E2D3D; color: #fff; }
+.b-gold  { background: #C9A84C; color: #1E2D3D; }
+.b-warn  { background: #D4870C; color: #fff; }
+
+.card-body { padding: 14px 16px; }
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1E2D3D;
+  margin-bottom: 6px;
+}
+
+.card-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.55;
+}
+
+.card-note {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* ─── EXPERIENCE CARDS ─── */
+.exp-list { display: flex; flex-direction: column; gap: 12px; }
+
+.exp-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.exp-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.11);
+}
+
+.exp-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.ic1 { background: #f5e8e0; }
+.ic2 { background: #e8eef5; }
+.ic3 { background: #e4eee5; }
+.ic4 { background: #f5f0e0; }
+
+.exp-body { flex: 1; min-width: 0; }
+
+.exp-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1E2D3D;
+  margin-bottom: 5px;
+}
+
+.exp-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.55;
+}
+
+.exp-tags {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.t-red  { background: #f5e8e0; color: #C4673A; }
+.t-navy { background: #e8eef5; color: #1E2D3D; }
+.t-gold { background: #f5f0e0; color: #7a5a1a; }
+
+/* ─── FOOD ─── */
+.food-section { margin-bottom: 28px; }
+
+.food-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e5ddd0;
+  margin-bottom: 14px;
+}
+
+.food-header-icon { font-size: 22px; }
+
+.food-header-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1E2D3D;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.food-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.food-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.food-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1E2D3D;
+  margin-bottom: 5px;
+}
+
+.food-desc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.food-must {
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #C4673A;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.food-must::before {
+  content: '';
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #C4673A;
+  flex-shrink: 0;
+}
+
+.food-porto {
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #534AB7;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.food-porto::before {
+  content: '';
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #534AB7;
+  flex-shrink: 0;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  background: #1E2D3D;
+  padding: 20px 24px;
+  text-align: center;
+  color: rgba(255,255,255,0.45);
+  font-size: 13px;
+}
+
+.footer strong { color: #E8956D; font-weight: 500; }
+
+/* ─── MOBILE ─── */
+@media (max-width: 600px) {
+  .header-title { font-size: 20px; }
+  .sec-title { font-size: 24px; }
+  .grid { grid-template-columns: 1fr; }
+  .food-grid { grid-template-columns: 1fr 1fr; }
+  .tab { padding: 12px 14px; font-size: 13px; }
+  .content { padding: 20px 14px 50px; }
+}
+
+@media (max-width: 400px) {
+  .food-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── CITY SUBTABS ─── */
+.city-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.city-tab {
+  padding: 8px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 100px;
+  border: 2px solid #ddd5c8;
+  background: #ffffff;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.city-tab:hover { border-color: #C4673A; color: #C4673A; }
+
+.city-tab.active {
+  background: #1E2D3D;
+  border-color: #1E2D3D;
+  color: #ffffff;
+}
+
+.city-panel { display: none; }
+.city-panel.active { display: block; }
+
+/* ─── CITY HEADER BANNER ─── */
+.city-banner {
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.city-banner.lisbon { background: linear-gradient(135deg, #1E2D3D, #2E4259); }
+.city-banner.porto  { background: linear-gradient(135deg, #4a1a6b, #6b2d9a); }
+.city-banner.sintra { background: linear-gradient(135deg, #1a4a2e, #2d7a4a); }
+
+.city-banner-emoji { font-size: 36px; }
+
+.city-banner-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+.city-banner-text p {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.04em;
+}
+
+/* ─── TRANSPORT ─── */
+.transport-section { margin-bottom: 36px; }
+
+.transport-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1E2D3D;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.transport-header-icon { font-size: 28px; flex-shrink: 0; }
+
+.transport-header-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.transport-header-text p {
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+}
+
+.transport-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.transport-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border-left: 4px solid #C4673A;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.transport-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.11);
+}
+
+.transport-card.navy  { border-left-color: #1E2D3D; }
+.transport-card.gold  { border-left-color: #C9A84C; }
+.transport-card.green { border-left-color: #5a8f62; }
+.transport-card.purple{ border-left-color: #7B5EA7; }
+
+.tc-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1E2D3D;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tc-desc {
+  font-size: 12.5px;
+  color: #555;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.tc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tc-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #F5F0E8;
+  color: #1E2D3D;
+}
+
+.tc-pill.price { background: #e8f5ec; color: #2d7a3a; }
+.tc-pill.time  { background: #e8eef5; color: #1E2D3D; }
+.tc-pill.tip   { background: #fef3cd; color: #7a5a1a; }
+
+.route-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: start;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.route-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.11);
+}
+
+.route-from-to {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1E2D3D;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.route-arrow { color: #C4673A; font-style: normal; }
+
+.route-desc {
+  font-size: 12.5px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.route-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.route-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.stat-box {
+  background: #F5F0E8;
+  border-radius: 8px;
+  padding: 6px 10px;
+  text-align: center;
+  min-width: 70px;
+}
+
+.stat-val {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1E2D3D;
+  font-family: 'Playfair Display', serif;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #888;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 500px) {
+  .route-card { grid-template-columns: 1fr; }
+  .route-stats { flex-direction: row; align-items: flex-start; }
+  .transport-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-title">🇵🇹 Поездка в Португалию</div>
+  <div class="header-pills">
+    <span class="header-pill">✈ Прилёт 6 мая · 16:45</span>
+    <span class="header-pill">📍 База — Лиссабон</span>
+    <span class="header-pill">✈ Отлёт 11 мая</span>
+  </div>
+</header>
+
+<!-- TAB BAR -->
+<div class="tabbar">
+  <button class="tab active" onclick="switchTab('places', this)">📍 Места</button>
+  <button class="tab" onclick="switchTab('exp', this)">✨ Активности</button>
+  <button class="tab" onclick="switchTab('food', this)">🍽️ Еда и напитки</button>
+  <button class="tab" onclick="switchTab('transport', this)">🚇 Транспорт</button>
+</div>
+
+<!-- ══════════ PANEL: PLACES ══════════ -->
+<div class="panel active" id="panel-places">
+  <div class="content">
+    <p class="sec-label">Лиссабон и окрестности</p>
+    <h2 class="sec-title">Места, которые стоит <em>посетить</em></h2>
+    <div class="city-tabs">
+      <button class="city-tab active" onclick="switchCity('lisbon', this)">🏙️ Лиссабон</button>
+      <button class="city-tab" onclick="switchCity('porto', this)">🍷 Porto</button>
+      <button class="city-tab" onclick="switchCity('sintra', this)">🏰 Sintra</button>
+    </div>
+
+    <div class="city-panel active" id="city-lisbon">
+
+    <div class="alert">
+      ⚠️ <span><strong>Важно:</strong> Torre de Belém сейчас на реконструкции — снаружи красиво, но внутрь могут не пустить. Смотровая лифта Санта-Жушта тоже закрыта. Уточняйте перед визитом.</span>
+    </div>
+
+    <p class="divider">Обязательно к посещению</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/sao_jorge.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Castelo de São Jorge</div>
+          <div class="card-desc">Замок на холме с панорамным видом на 360°. Скачайте бесплатный аудиогид. По территории гуляют павлины!</div>
+          <div class="card-note">🕘 Ежедневно 9:00–21:00 · ~€15</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/alfama.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Alfama</div>
+          <div class="card-desc">Старейший район Лиссабона — просто гуляйте без карты. Мощёные переулки, изразцовые дома, fado из дверных проёмов.</div>
+          <div class="card-note">🚶 Просто гулять · Бесплатно</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/jeronimos.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Mosteiro dos Jerónimos</div>
+          <div class="card-desc">Потрясающая Manueline готика, объект наследия ЮНЕСКО. Бронируйте вход заранее — в мае огромные очереди.</div>
+          <div class="card-note">🚫 Закрыт по понедельникам · ~€10 · Бронируйте!</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/belem.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Torre de Belém</div>
+          <div class="card-desc">Крепость XVI века на берегу Tejo. Сейчас на реконструкции, но набережная и внешний вид — отличные для фото.</div>
+          <div class="card-note">📸 Снаружи бесплатно · Внутрь уточняйте</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/praca_do_commercio.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Praça do Comércio</div>
+          <div class="card-desc">Главная набережная площадь с жёлтыми аркадами и видом на Tejo. Особенно красива на закате. Здесь же Arco da Rua Augusta.</div>
+          <div class="card-note">🕐 Открыта круглосуточно · Бесплатно</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/lx_factory.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">LX Factory</div>
+          <div class="card-desc">Бывший промышленный комплекс с магазинами, стрит-артом, ресторанами. По субботам лучший рынок.</div>
+          <div class="card-note">🕙 Ежедневно с 10:30 · Вход свободный</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/oceanario.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Oceanário de Lisboa</div>
+          <div class="card-desc">Один из лучших аквариумов в мире. Огромный центральный резервуар, выдры, пингвины, тупики. Минимум 2 часа.</div>
+          <div class="card-note">🕙 Ежедневно 10:00–19:00 · ~€23</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/parque_das_nacoes.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Parque das Nações</div>
+          <div class="card-desc">Футуристический район Экспо-1998 на берегу Tejo. Необычная архитектура и красивая набережная. Здесь же Oceanário.</div>
+          <div class="card-note">🚇 Красная линия метро · Прогулка бесплатна</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="divider">Скрытые жемчужины</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/miradouro_da_graca.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Miradouro da Graça</div>
+          <div class="card-desc">Лучшая смотровая, о которой большинство туристов не знает. Тише знаменитых, вид на замок — пожалуй, лучший в городе. Есть киоск с пивом.</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/jardim_da_estrela.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Jardim da Estrela</div>
+          <div class="card-desc">Красивый сад XIX века с прудом, уточками и вековыми деревьями. Совсем не туристическое место — сюда приходят местные. Рядом Базилика Estrela.</div>
+          <div class="card-note">🕐 Ежедневно · Бесплатно</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="divider">Классический Лиссабон</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/tram_28.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Трамвай 28</div>
+          <div class="card-desc">Исторический маршрут через Алфаму и Chiado — дребезжащий, атмосферный. В мае много туристов, езжайте рано утром.</div>
+          <div class="card-note">🎫 Включён в проездной Viva Viagem</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/feira_da_ladra.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Feira da Ladra</div>
+          <div class="card-desc">Легендарный блошиный рынок — изразцы, книги, винил, винтаж. Приходите пораньше, торговцы уходят к 14:00. Только наличные!</div>
+          <div class="card-note">📅 Вторник и суббота · Только наличные!</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/elevador_de_santa_justa.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Elevador de Santa Justa</div>
+          <div class="card-desc">Неоготический чугунный лифт в центре Байши. Смотровая на вершине закрыта на ремонт, но сам лифт работает.</div>
+          <div class="card-note">⚠️ Смотровая закрыта · Лифт работает</div>
+        </div>
+      </div>
+    </div>
+    </div><!-- /city-lisbon -->
+
+
+  <!-- ── PORTO ── -->
+  <div class="city-panel" id="city-porto">
+    <div class="city-banner porto">
+      <span class="city-banner-emoji">🍷</span>
+      <div class="city-banner-text">
+        <h3>Porto</h3>
+        <p>Однодневная поездка · ~3 часа на поезде Alfa Pendular</p>
+      </div>
+    </div>
+
+    <p class="divider">Обязательно к посещению</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top bg5"><span>📚</span><span class="badge b-navy">Обязательно</span></div>
+        <div class="card-body">
+          <div class="card-title">Livraria Lello</div>
+          <div class="card-desc">Один из красивейших книжных магазинов в мире. Неоготический интерьер, знаменитая деревянная лестница. Говорят, вдохновил Роулинг при создании Хогвартса. Билет ~€12, покупайте онлайн.</div>
+          <div class="card-note">🕘 Ежедневно 9:00–19:00 · ~€12 · Бронируйте заранее</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top bg1"><span>🏛️</span><span class="badge b-navy">Обязательно</span></div>
+        <div class="card-body">
+          <div class="card-title">Palácio da Bolsa</div>
+          <div class="card-desc">Дворец биржи XIX века с невероятным Арабским залом внутри. Только с экскурсией (~30 минут) — гиды великолепны.</div>
+          <div class="card-note">🕘 Ежедневно 9:00–18:30 · ~€14</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top bg2"><span>🌉</span><span class="badge b-navy">Обязательно</span></div>
+        <div class="card-body">
+          <div class="card-title">Ribeira</div>
+          <div class="card-desc">Живописная набережная Douro с разноцветными домами, кафе и видом на Vila Nova de Gaia. Особенно красива на закате. Здесь же отправляются лодки rabelo.</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top bg3"><span>⛪</span><span class="badge b-navy">Обязательно</span></div>
+        <div class="card-body">
+          <div class="card-title">Igreja dos Clérigos e Torre</div>
+          <div class="card-desc">Барочная церковь XVIII века с самой высокой башней Порту. 240 ступеней — и перед вами лучший вид на город и реку Douro.</div>
+          <div class="card-note">🕘 Ежедневно 9:00–19:00 · ~€8–10</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top bg4"><span>🍷</span><span class="badge b-gold">Вина</span></div>
+        <div class="card-body">
+          <div class="card-title">Caves do Vinho do Porto (Gaia)</div>
+          <div class="card-desc">Переправьтесь через реку в Vila Nova de Gaia — там знаменитые погреба Graham's, Sandeman, Taylor's. Дегустация от €10–15. Белый vinho do Porto с тоником — откровение.</div>
+          <div class="card-note">🍷 Дегустация ~€10–15 · Рядом с Рибейрой</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SINTRA ── -->
+  <div class="city-panel" id="city-sintra">
+    <div class="city-banner sintra">
+      <span class="city-banner-emoji">🏰</span>
+      <div class="city-banner-text">
+        <h3>Sintra</h3>
+        <p>Однодневная поездка · ~40 минут на электричке из Rossio</p>
+      </div>
+    </div>
+
+    <p class="divider">Обязательно к посещению</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top bg3"><span>🏰</span><span class="badge b-red">Обязательно</span></div>
+        <div class="card-body">
+          <div class="card-title">Palácio da Pena</div>
+          <div class="card-desc">Самый красочный и сказочный дворец Португалии — жёлтые и красные башни прямо в лесу на вершине горы. Приезжайте как можно раньше — к полудню огромные очереди.</div>
+          <div class="card-note">🕘 10:00–18:00 · ~€14 · Приезжайте до открытия!</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top bg4"><span>🌳</span><span class="badge b-green">Жемчужина</span></div>
+        <div class="card-body">
+          <div class="card-title">Quinta da Regaleira</div>
+          <div class="card-desc">Таинственная усадьба с готическими башнями, секретными тоннелями и знаменитым инициатическим колодцем, по которому можно спуститься вниз. Более атмосферная, чем Пена.</div>
+          <div class="card-note">🕘 9:30–20:00 · ~€15</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top bg1"><span>🏰</span><span class="badge b-navy">Классика</span></div>
+        <div class="card-body">
+          <div class="card-title">Castelo dos Mouros</div>
+          <div class="card-desc">Средневековый замок VIII–IX веков с крепостными стенами на скалах и панорамным видом на леса, дворцы и океан. Можно ходить по стенам.</div>
+          <div class="card-note">🕘 9:00–18:00 · ~€8</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<!-- ══════════ PANEL: EXPERIENCES ══════════ -->
+<div class="panel" id="panel-exp">
+  <div class="content">
+    <p class="sec-label">Чем заняться</p>
+    <h2 class="sec-title">Обязательные <em>активности</em></h2>
+    <div class="exp-list">
+
+      <div class="exp-card">
+        <div class="exp-icon ic1">🎵</div>
+        <div class="exp-body">
+          <div class="exp-title">Ужин с fado в Алфаме</div>
+          <div class="exp-desc">Самое португальское переживание — живая музыка в маленьком заведении с ужином. Приходите около 20:00, музыка начинается в 21:00. Попробуйте Tasca do Chico (всего 25 мест!) или Sr. Fado.</div>
+          <div class="exp-tags">
+            <span class="tag t-red">Бронируйте заранее</span>
+            <span class="tag t-gold">~€35–50 с человека</span>
+            <span class="tag t-navy">Alfama</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-icon ic2">⛵</div>
+        <div class="exp-body">
+          <div class="exp-title">Парусная прогулка на закате</div>
+          <div class="exp-desc">1–2 часа на паруснике в золотой час — вино включено, группы по 10–14 человек. Город горит янтарём, мост 25 апреля красиво подсвечивается. Можно самим взяться за штурвал.</div>
+          <div class="exp-tags">
+            <span class="tag t-red">GetYourGuide</span>
+            <span class="tag t-gold">~€35–55 с человека</span>
+            <span class="tag t-navy">Отправление из Belémа</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-icon ic3">🚢</div>
+        <div class="exp-body">
+          <div class="exp-title">Паром до Cacilhas</div>
+          <div class="exp-desc">10 минут через Tejo за €1,35 в одну сторону. Одно из лучших впечатлений в Лиссабоне за копейки. С реки открывается вид на весь силуэт города. На той стороне — отличные рыбные рестораны.</div>
+          <div class="exp-tags">
+            <span class="tag t-red">€1,35 в одну сторону</span>
+            <span class="tag t-navy">От Cais do Sodré</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-icon ic4">🍷</div>
+        <div class="exp-body">
+          <div class="exp-title">Дегустация вин</div>
+          <div class="exp-desc">By the Wine в Chiado — заведение целиком для португальских вин. В Порту — знаменитые погреба Graham's, Sandeman, Taylor's в Vila Nova de Gaia. Белый vinho do Porto с тоником со льдом — откровение.</div>
+          <div class="exp-tags">
+            <span class="tag t-red">By the Wine, Chiado</span>
+            <span class="tag t-gold">Дегустация в Порту ~€10–15</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-icon ic3">🚴</div>
+        <div class="exp-body">
+          <div class="exp-title">Тур на электровелосипеде</div>
+          <div class="exp-desc">По холмам Лиссабона на обычном велосипеде тяжело — на электро это одно удовольствие. Туры 3–4 часа: Alfama, Belém, набережная, смотровые. Отличный способ охватить много за день.</div>
+          <div class="exp-tags">
+            <span class="tag t-red">~€35–45 с человека</span>
+            <span class="tag t-navy">Lisbon Bike Tour · Bike Iberia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-icon ic1">🎨</div>
+        <div class="exp-body">
+          <div class="exp-title">Мастер-класс по росписи изразцов</div>
+          <div class="exp-desc">Научитесь расписывать знаменитые португальские изразцы azulejos и увезите домой собственноручно сделанный сувенир. Отличное занятие для двоих — 1,5–2 часа.</div>
+          <div class="exp-tags">
+            <span class="tag t-red">~€30–40 с человека</span>
+            <span class="tag t-navy">1,5–2 часа · GetYourGuide</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-icon ic2">🌊</div>
+        <div class="exp-body">
+          <div class="exp-title">Морская прогулка в Аррабиде</div>
+          <div class="exp-desc">Красивейшее побережье рядом с Лиссабоном — кристально чистая бирюзовая вода, как на Карибах. Морские гроты, скрытые пляжи, снорклинг. Из Setúbal (~1 час от Лиссабона). Май — идеальное время.</div>
+          <div class="exp-tags">
+            <span class="tag t-red">~€40–55 с человека</span>
+            <span class="tag t-navy">GetYourGuide</span>
+            <span class="tag t-gold">Целый день</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-icon ic1">🌃</div>
+        <div class="exp-body">
+          <div class="exp-title">Ночная прогулка по Bairro Alto</div>
+          <div class="exp-desc">Самый известный ночной район Лиссабона. Бары выплёскиваются на улицы, люди бродят с напитками — весь квартал становится одной большой вечеринкой. Оживает около 22:00.</div>
+          <div class="exp-tags">
+            <span class="tag t-red">Гулять бесплатно</span>
+            <span class="tag t-navy">Начиная с ~22:00</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PANEL: FOOD ══════════ -->
+<div class="panel" id="panel-food">
+  <div class="content">
+    <p class="sec-label">Вкусное путешествие</p>
+    <h2 class="sec-title">Еда и напитки, которые <em>нужно попробовать</em></h2>
+
+    <div class="food-section">
+      <div class="food-header">
+        <span class="food-header-icon">🥐</span>
+        <span class="food-header-title">Выпечка и сладкое</span>
+      </div>
+      <div class="food-grid">
+        <div class="food-card">
+          <div class="food-name">Pastel de Nata</div>
+          <div class="food-desc">Заварной тарт со слоёным тестом. Едят тёплым с корицей и сахарной пудрой. Рецепт хранится в тайне с 1837 года. Лучший — в Pastéis de Belém.</div>
+          <div class="food-must">Обязательно — съедите их десятками</div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">Travesseiro de Sintra</div>
+          <div class="food-desc">Слоёное тесто с миндальным кремом. Снаружи хрустящее, внутри нежное. Только в Синтре — берите тёплыми из печи в Casa Piriquita.</div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">Bola de Berlim</div>
+          <div class="food-desc">Португальский пончик с заварным кремом. Продаётся прямо на пляже — вы точно купите, когда увидите.</div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">Toucinho do Céu</div>
+          <div class="food-desc">Традиционный миндальный пирог, плотный и сладкий. Название: «небесный бекон». В любой кондитерской Лиссабона.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-section">
+      <div class="food-header">
+        <span class="food-header-icon">🥩</span>
+        <span class="food-header-title">Еда</span>
+      </div>
+      <div class="food-grid">
+        <div class="food-card">
+          <div class="food-name">Bifana</div>
+          <div class="food-desc">Булочка со свининой в вине, чесноке и паприке. Дёшево, вкусно, одно из лучших уличных блюд в мире. В любой tasca ~€2–3.</div>
+          <div class="food-must">Обязательно</div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">Francesinha</div>
+          <div class="food-desc">Блюдо Порту — сэндвич из вяленого мяса и стейка, залитый сыром и острым томатно-пивным соусом. Тяжёло и невероятно вкусно.</div>
+          <div class="food-porto">Только в Порту — обязательно</div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">Polvo à Lagareiro</div>
+          <div class="food-desc">Целый осьминог, запечённый с маслом, чесноком и картофелем. Всегда нежный. Есть в меню почти любого ресторана.</div>
+          <div class="food-must">Обязательно</div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">Peixe Grelhado</div>
+          <div class="food-desc">Свежая атлантическая рыба на углях с оливковым маслом и лимоном. Лучшая — в рыбных ресторанах Cacilhas с видом на Лиссабон.</div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">Ameijoas à Bulhão Pato</div>
+          <div class="food-desc">Моллюски в белом вине с чесноком и кинзой. Заказывайте как закуску и вымакайте соус хлебом — это обязательно.</div>
+          <div class="food-must">Обязательно</div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">Bacalhau à Brás</div>
+          <div class="food-desc">Солёная треска с яйцами, хрустящей картошкой-соломкой и чёрными оливками. В меню почти каждого традиционного ресторана.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-section">
+      <div class="food-header">
+        <span class="food-header-icon">🍷</span>
+        <span class="food-header-title">Напитки</span>
+      </div>
+      <div class="food-grid">
+        <div class="food-card">
+          <div class="food-name">Ginjinha</div>
+          <div class="food-desc">Сладкий вишнёвый ликёр, пьётся стоя у стойки. В A Ginjinha на Largo de São Domingos с 1840 года. Около €1,50.</div>
+          <div class="food-must">Обязательно — €1,50, просто сделайте это</div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">Vinho Verde</div>
+          <div class="food-desc">«Зелёное вино» — молодое, лёгкое, слегка игристое. Освежающее и идеальное для тёплого майского дня. Заказывайте везде.</div>
+          <div class="food-must">Обязательно</div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">Vinho do Porto</div>
+          <div class="food-desc">Крепкое сладкое вино от молодого Ruby до выдержанного Tawny. В Порту посетите погреба Vila Nova de Gaia. Попробуйте белый vinho do Porto с тоником.</div>
+          <div class="food-porto">Порту — дегустация ~€10–15</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════ PANEL: TRANSPORT ══════════ -->
+<div class="panel" id="panel-transport">
+  <div class="content">
+    <p class="sec-label">Как добраться и передвигаться</p>
+    <h2 class="sec-title">Транспорт и <em>маршруты</em></h2>
+
+    <!-- ВНУТРИ ЛИССАБОНА -->
+    <div class="transport-section">
+      <div class="transport-header">
+        <span class="transport-header-icon">🏙️</span>
+        <div class="transport-header-text">
+          <h3>Внутри Лиссабона</h3>
+          <p>Как перемещаться по городу</p>
+        </div>
+      </div>
+      <div class="transport-grid">
+
+        <div class="transport-card navy">
+          <div class="tc-name">🎫 Карта Viva Viagem</div>
+          <div class="tc-desc">Единая перезаряжаемая карта для всего общественного транспорта — метро, автобусы, трамваи, фуникулёры, лифт Санта-Жушта. Покупается в кассах метро или в аэропорту. Стоит €0,50 + пополнение.</div>
+          <div class="tc-meta">
+            <span class="tc-pill price">Карта €0,50</span>
+            <span class="tc-pill tip">⭐ Купите сразу по прилёту</span>
+          </div>
+        </div>
+
+        <div class="transport-card navy">
+          <div class="tc-name">🚇 Метро</div>
+          <div class="tc-desc">4 линии, охватывают большинство районов включая аэропорт. Быстро, чисто, надёжно. Работает с 6:30 до 1:00. Одна поездка по карте Viva Viagem дешевле, чем на кассе.</div>
+          <div class="tc-meta">
+            <span class="tc-pill price">~€1,61 / поездка</span>
+            <span class="tc-pill time">6:30 — 1:00</span>
+            <span class="tc-pill tip">Аэропорт → центр ~25 мин</span>
+          </div>
+        </div>
+
+        <div class="transport-card">
+          <div class="tc-name">🚌 Автобусы и трамваи</div>
+          <div class="tc-desc">Покрывают всё, что метро не достаёт, включая Belém. Знаменитый трамвай 28 — через Алфаму и Chiado. В мае очень переполнен туристами — лучше рано утром. Оплата картой Viva Viagem.</div>
+          <div class="tc-meta">
+            <span class="tc-pill price">По карте Viva Viagem</span>
+            <span class="tc-pill tip">Трамвай 28 — рано утром</span>
+          </div>
+        </div>
+
+        <div class="transport-card">
+          <div class="tc-name">🚡 Фуникулёры</div>
+          <div class="tc-desc">Три исторических фуникулёра на крутые холмы города — Бика, Глория и Лавра. Включены в карту Viva Viagem. Бика сейчас закрыта после аварии на Глории в сентябре 2025 года — уточняйте статус.</div>
+          <div class="tc-meta">
+            <span class="tc-pill price">По карте Viva Viagem</span>
+            <span class="tc-pill tip">⚠️ Бика закрыта, проверьте</span>
+          </div>
+        </div>
+
+        <div class="transport-card gold">
+          <div class="tc-name">🎟️ Суточный проездной</div>
+          <div class="tc-desc">Безлимитный проездной на 24 часа — метро, автобусы, трамваи, фуникулёры. Отличная цена если планируете много ездить. Покупается в кассах метро на карту Viva Viagem.</div>
+          <div class="tc-meta">
+            <span class="tc-pill price">€6,80 / сутки</span>
+            <span class="tc-pill tip">Выгодно от 4+ поездок</span>
+          </div>
+        </div>
+
+        <div class="transport-card green">
+          <div class="tc-name">🚌 Hop-on Hop-off</div>
+          <div class="tc-desc">Туристический двухэтажный автобус с остановками у главных достопримечательностей. Удобно для первого знакомства с городом. Несколько маршрутов — центр, Belém, Sintra. Билет действует 24 или 48 часов.</div>
+          <div class="tc-meta">
+            <span class="tc-pill price">~€20–30 / день</span>
+            <span class="tc-pill tip">Хорошо для первого дня</span>
+          </div>
+        </div>
+
+        <div class="transport-card green">
+          <div class="tc-name">⛴️ Паром Cais do Sodré → Cacilhas</div>
+          <div class="tc-desc">10 минут через реку Tejo — и вы на южном берегу. Лучший вид на силуэт Лиссабона открывается именно с воды. Ходит очень часто, принимает карту Viva Viagem.</div>
+          <div class="tc-meta">
+            <span class="tc-pill price">€1,35 в одну сторону</span>
+            <span class="tc-pill time">~10 минут</span>
+          </div>
+        </div>
+
+        <div class="transport-card purple">
+          <div class="tc-name">🚗 Uber / Bolt</div>
+          <div class="tc-desc">Оба приложения отлично работают в Лиссабоне. Очень доступные цены — поездка через весь центр редко стоит больше €6–8. Удобно поздно ночью или когда едете с вещами.</div>
+          <div class="tc-meta">
+            <span class="tc-pill price">€4–8 по городу</span>
+            <span class="tc-pill tip">Идеально для ночных поездок</span>
+          </div>
+        </div>
+
+        <div class="transport-card">
+          <div class="tc-name">🚶 Пешком</div>
+          <div class="tc-desc">Лиссабон компактный и большинство достопримечательностей пешей доступности от центра. Но город холмистый — удобная обувь обязательна! Alfama, Baixa, Chiado, Bairro Alto — всё рядом.</div>
+          <div class="tc-meta">
+            <span class="tc-pill price">Бесплатно</span>
+            <span class="tc-pill tip">Удобная обувь — обязательно</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ИЗ ЛИССАБОНА: ПОЕЗДКИ -->
+    <div class="transport-section">
+      <div class="transport-header">
+        <span class="transport-header-icon">🗺️</span>
+        <div class="transport-header-text">
+          <h3>Из Лиссабона</h3>
+          <p>Однодневные поездки и другие города</p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+
+        <div class="route-card">
+          <div>
+            <div class="route-from-to">🏰 Sintra <em class="route-arrow">→</em> на день</div>
+            <div class="route-desc">Самая популярная однодневная поездка. Электричка от станции Rossio или Oriente — прямой маршрут без пересадок. Поезда ходят каждые 20–30 минут. Приезжайте как можно раньше — к 10:00 уже толпы. Лучше быть там к открытию Дворца Пена (10:00).</div>
+            <div class="route-pills">
+              <span class="tc-pill price">Билет ~€2,50 в одну сторону</span>
+              <span class="tc-pill tip">Станция Rossio или Oriente</span>
+              <span class="tc-pill tip">Поезда каждые ~20 мин</span>
+            </div>
+          </div>
+          <div class="route-stats">
+            <div class="stat-box"><div class="stat-val">40</div><div class="stat-label">минут</div></div>
+            <div class="stat-box"><div class="stat-val">€2,50</div><div class="stat-label">билет</div></div>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div>
+            <div class="route-from-to">🍷 Porto <em class="route-arrow">→</em> на день</div>
+            <div class="route-desc">Лучший вариант — скоростной поезд Alfa Pendular со станции Oriente. Бронируйте билеты заранее на сайте cp.pt — цены ниже и места разбирают. В мае лучше купить хотя бы за неделю. Удобно уехать утром (~8:00), вернуться вечером (~22:00).</div>
+            <div class="route-pills">
+              <span class="tc-pill price">Билет €20–35 в одну сторону</span>
+              <span class="tc-pill tip">Alfa Pendular — самый быстрый</span>
+              <span class="tc-pill tip">Бронируйте на cp.pt</span>
+            </div>
+          </div>
+          <div class="route-stats">
+            <div class="stat-box"><div class="stat-val">~3 ч</div><div class="stat-label">поездом</div></div>
+            <div class="stat-box"><div class="stat-val">€20–35</div><div class="stat-label">билет</div></div>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div>
+            <div class="route-from-to">🌊 Cascais <em class="route-arrow">→</em> на полдня</div>
+            <div class="route-desc">Очаровательный прибрежный городок с пляжами и хорошими ресторанами. Электричка от станции Cais do Sodré — самая живописная прибрежная линия Португалии. Можно совместить с Синтрой — они рядом.</div>
+            <div class="route-pills">
+              <span class="tc-pill price">Билет ~€2,40 в одну сторону</span>
+              <span class="tc-pill tip">Станция Cais do Sodré</span>
+              <span class="tc-pill tip">Поезда очень часто</span>
+            </div>
+          </div>
+          <div class="route-stats">
+            <div class="stat-box"><div class="stat-val">40</div><div class="stat-label">минут</div></div>
+            <div class="stat-box"><div class="stat-val">€2,40</div><div class="stat-label">билет</div></div>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div>
+            <div class="route-from-to">🌍 Cabo da Roca <em class="route-arrow">→</em> полдня/день</div>
+            <div class="route-desc">Самая западная точка континентальной Европы — драматические скалы над Атлантикой. Добраться сложнее всего: из Синтры автобусом №403 Sintra–Cascais (~35 мин) или такси (~15 мин). Удобнее всего совместить с поездкой в Синтру — сначала Sintra, потом Кабу. Можно вернуться в Cascais на автобусе и оттуда на электричке в Лиссабон.</div>
+            <div class="route-pills">
+              <span class="tc-pill price">Автобус из Синтры ~€2,60</span>
+              <span class="tc-pill tip">Совмещайте с Синтрой</span>
+              <span class="tc-pill tip">Автобус №403 Sintra–Cascais</span>
+            </div>
+          </div>
+          <div class="route-stats">
+            <div class="stat-box"><div class="stat-val">~35</div><div class="stat-label">мин из Синтры</div></div>
+            <div class="stat-box"><div class="stat-val">€2,60</div><div class="stat-label">автобус</div></div>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div>
+            <div class="route-from-to">🏖️ Arrábida <em class="route-arrow">→</em> на день</div>
+            <div class="route-desc">Потрясающий природный парк с бирюзовой водой и скалами — самое красивое побережье рядом с Лиссабоном. Прямого общественного транспорта нет — лучше взять такси/Uber до Setúbal (~1 ч) или арендовать машину. Из Setúbal отправляются лодочные туры.</div>
+            <div class="route-pills">
+              <span class="tc-pill price">Такси/Uber ~€30–40 до Setúbal</span>
+              <span class="tc-pill tip">Или аренда авто</span>
+              <span class="tc-pill tip">Лодочный тур ~€40–55</span>
+            </div>
+          </div>
+          <div class="route-stats">
+            <div class="stat-box"><div class="stat-val">~1 ч</div><div class="stat-label">до Setúbal</div></div>
+            <div class="stat-box"><div class="stat-val">€30–40</div><div class="stat-label">такси</div></div>
+          </div>
+        </div>
+
+        <div class="route-card">
+          <div>
+            <div class="route-from-to">🏰 Óbidos <em class="route-arrow">→</em> на полдня</div>
+            <div class="route-desc">Идеально сохранившийся средневековый городок в крепостных стенах, примерно 1,5 часа от Лиссабона. Автобус от терминала Sete Rios. Знаменит ликёром ginjinha в шоколадной рюмке.</div>
+            <div class="route-pills">
+              <span class="tc-pill price">Автобус ~€8–10 в одну сторону</span>
+              <span class="tc-pill tip">Терминал Sete Rios</span>
+            </div>
+          </div>
+          <div class="route-stats">
+            <div class="stat-box"><div class="stat-val">~1,5 ч</div><div class="stat-label">автобусом</div></div>
+            <div class="stat-box"><div class="stat-val">€8–10</div><div class="stat-label">билет</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- АЭРОПОРТ -->
+    <div class="transport-section">
+      <div class="transport-header">
+        <span class="transport-header-icon">✈️</span>
+        <div class="transport-header-text">
+          <h3>Аэропорт ↔ Центр</h3>
+          <p>Как добраться из аэропорта в город</p>
+        </div>
+      </div>
+      <div class="transport-grid">
+
+        <div class="transport-card navy">
+          <div class="tc-name">🚇 Метро (красная линия)</div>
+          <div class="tc-desc">Самый дешёвый вариант. Станция прямо в аэропорту — красная линия, пересадка на зелёную или синюю в центре. Багажа не много? Это лучший вариант.</div>
+          <div class="tc-meta">
+            <span class="tc-pill price">~€1,61</span>
+            <span class="tc-pill time">~25 минут</span>
+            <span class="tc-pill tip">Работает с 6:30 до 1:00</span>
+          </div>
+        </div>
+
+        <div class="transport-card purple">
+          <div class="tc-name">🚗 Uber / Bolt</div>
+          <div class="tc-desc">Комфортно с багажом, машина ждёт в зоне прилёта. Цена фиксированная и невысокая. Приложения работают без проблем — заказывайте сразу после получения багажа.</div>
+          <div class="tc-meta">
+            <span class="tc-pill price">~€12–18 до центра</span>
+            <span class="tc-pill time">~20–30 минут</span>
+          </div>
+        </div>
+
+        <div class="transport-card">
+          <div class="tc-name">🚕 Такси</div>
+          <div class="tc-desc">Официальные такси у выхода из терминала. Дороже Uber, но надёжно. Фиксированный тариф до центра Лиссабона по закону. Убедитесь что включён счётчик.</div>
+          <div class="tc-meta">
+            <span class="tc-pill price">~€15–20 до центра</span>
+            <span class="tc-pill time">~20–30 минут</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>🇵🇹 <strong>Поездка в Португалию</strong> · Май 2026 · Лиссабон и Порту</p>
+  <p style="margin-top:6px;font-size:11px;">Скоро: однодневные поездки · морские прогулки · гид по Порту · транспорт</p>
+</footer>
+
+<script>
+function switchCity(name, btn) {
+  document.querySelectorAll('.city-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.city-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('city-' + name).classList.add('active');
+}
+
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-' + name).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

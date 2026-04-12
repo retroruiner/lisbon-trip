@@ -25,6 +25,7 @@
   <button class="tab" onclick="switchTab('exp', this)">✨ Активности</button>
   <button class="tab" onclick="switchTab('food', this)">🍽️ Еда и напитки</button>
   <button class="tab" onclick="switchTab('transport', this)">🚇 Транспорт</button>
+  <button class="tab" onclick="switchTab('beaches', this)">🏖️ Пляжи</button>
 </div>
 
 <!-- ══════════ PANEL: PLACES ══════════ -->
@@ -34,8 +35,8 @@
     <h2 class="sec-title">Места, которые стоит <em>посетить</em></h2>
     <div class="city-tabs">
       <button class="city-tab active" onclick="switchCity('lisbon', this)">🏙️ Лиссабон</button>
-      <button class="city-tab" onclick="switchCity('porto', this)">🍷 Porto</button>
-      <button class="city-tab" onclick="switchCity('sintra', this)">🏰 Sintra</button>
+      <button class="city-tab" onclick="switchCity('porto', this)">🍷 Порту</button>
+      <button class="city-tab" onclick="switchCity('sintra', this)">🏰 Синтра</button>
     </div>
 
     <div class="city-panel active" id="city-lisbon">
@@ -52,6 +53,9 @@
           <div class="card-title">Castelo de São Jorge</div>
           <div class="card-desc">Замок на холме с панорамным видом на 360°. Скачайте бесплатный аудиогид. По территории гуляют павлины!</div>
           <div class="card-note">🕘 Ежедневно 9:00–21:00 · ~€15</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Castelo+de+São+Jorge+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -60,6 +64,9 @@
           <div class="card-title">Alfama</div>
           <div class="card-desc">Старейший район Лиссабона — просто гуляйте без карты. Мощёные переулки, изразцовые дома, fado из дверных проёмов.</div>
           <div class="card-note">🚶 Просто гулять · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Alfama+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -67,7 +74,11 @@
         <div class="card-body">
           <div class="card-title">Mosteiro dos Jerónimos</div>
           <div class="card-desc">Потрясающая Manueline готика, объект наследия ЮНЕСКО. Бронируйте вход заранее — в мае огромные очереди.</div>
-          <div class="card-note">🚫 Закрыт по понедельникам · ~€10 · Бронируйте!</div>
+          <div class="card-note">🚫 Закрыт по понедельникам · ~€27 · Бронируйте!</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Mosteiro+dos+Jerónimos+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+            <a href="https://www.jeronimosmonasterytickets.com/?ci=1&cm=23354272256__c_x____CjwKCAjw4ufOBhBkEiwAfuC7-ZQypQsu7YqyaAU0QvW9odotvPu48FiHjilTWHku5rxDSAA0tKRr6BoCQ3MQAvD_BwE&gad_campaignid=23475707163" target="_blank" class="btn-tickets">🎟️ Билеты</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -76,6 +87,10 @@
           <div class="card-title">Torre de Belém</div>
           <div class="card-desc">Крепость XVI века на берегу Tejo. Сейчас на реконструкции, но набережная и внешний вид — отличные для фото.</div>
           <div class="card-note">📸 Снаружи бесплатно · Внутрь уточняйте</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Torre+de+Belém+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+            
+          </div>
         </div>
       </div>
       <div class="card">
@@ -84,6 +99,9 @@
           <div class="card-title">Praça do Comércio</div>
           <div class="card-desc">Главная набережная площадь с жёлтыми аркадами и видом на Tejo. Особенно красива на закате. Здесь же Arco da Rua Augusta.</div>
           <div class="card-note">🕐 Открыта круглосуточно · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praça+do+Comércio+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -92,6 +110,9 @@
           <div class="card-title">LX Factory</div>
           <div class="card-desc">Бывший промышленный комплекс с магазинами, стрит-артом, ресторанами. По субботам лучший рынок.</div>
           <div class="card-note">🕙 Ежедневно с 10:30 · Вход свободный</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=LX+Factory+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -99,7 +120,11 @@
         <div class="card-body">
           <div class="card-title">Oceanário de Lisboa</div>
           <div class="card-desc">Один из лучших аквариумов в мире. Огромный центральный резервуар, выдры, пингвины, тупики. Минимум 2 часа.</div>
-          <div class="card-note">🕙 Ежедневно 10:00–19:00 · ~€23</div>
+          <div class="card-note">🕙 Ежедневно 10:00–19:00 · €25</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Oceanário+de+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+            <a href="https://tickets.oceanario.pt/en/1548-online/9576-visit-to-the-oceanario-de-lisboa?language=en" target="_blank" class="btn-tickets">🎟️ Билеты</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -108,6 +133,9 @@
           <div class="card-title">Parque das Nações</div>
           <div class="card-desc">Футуристический район Экспо-1998 на берегу Tejo. Необычная архитектура и красивая набережная. Здесь же Oceanário.</div>
           <div class="card-note">🚇 Красная линия метро · Прогулка бесплатна</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Parque+das+Nações+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
     </div>
@@ -120,6 +148,9 @@
           <div class="card-title">Miradouro da Graça</div>
           <div class="card-desc">Лучшая смотровая, о которой большинство туристов не знает. Тише знаменитых, вид на замок — пожалуй, лучший в городе. Есть киоск с пивом.</div>
           <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Miradouro+da+Graça+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -128,6 +159,9 @@
           <div class="card-title">Jardim da Estrela</div>
           <div class="card-desc">Красивый сад XIX века с прудом, уточками и вековыми деревьями. Совсем не туристическое место — сюда приходят местные. Рядом Базилика Estrela.</div>
           <div class="card-note">🕐 Ежедневно · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Jardim+da+Estrela+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
     </div>
@@ -137,9 +171,12 @@
       <div class="card">
         <div class="card-top" style="padding:0;background:#000;"><img src="images/tram_28.png" style="width:100%;height:100%;object-fit:cover;"></div>
         <div class="card-body">
-          <div class="card-title">Трамвай 28</div>
+          <div class="card-title">Tram 28</div>
           <div class="card-desc">Исторический маршрут через Алфаму и Chiado — дребезжащий, атмосферный. В мае много туристов, езжайте рано утром.</div>
           <div class="card-note">🎫 Включён в проездной Viva Viagem</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Tram+28+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -148,6 +185,9 @@
           <div class="card-title">Feira da Ladra</div>
           <div class="card-desc">Легендарный блошиный рынок — изразцы, книги, винил, винтаж. Приходите пораньше, торговцы уходят к 14:00. Только наличные!</div>
           <div class="card-note">📅 Вторник и суббота · Только наличные!</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Feira+da+Ladra+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -156,6 +196,9 @@
           <div class="card-title">Elevador de Santa Justa</div>
           <div class="card-desc">Неоготический чугунный лифт в центре Байши. Смотровая на вершине закрыта на ремонт, но сам лифт работает.</div>
           <div class="card-note">⚠️ Смотровая закрыта · Лифт работает</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Elevador+de+Santa+Justa+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
     </div>
@@ -167,51 +210,294 @@
     <div class="city-banner porto">
       <span class="city-banner-emoji">🍷</span>
       <div class="city-banner-text">
-        <h3>Porto</h3>
+        <h3>Порту</h3>
         <p>Однодневная поездка · ~3 часа на поезде Alfa Pendular</p>
       </div>
     </div>
 
-    <p class="divider">Обязательно к посещению</p>
+        <p class="divider">Исторический центр</p>
     <div class="grid">
       <div class="card">
-        <div class="card-top bg5"><span>📚</span><span class="badge b-navy">Обязательно</span></div>
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/livraria_lello.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-red">Обязательно</span></div>
         <div class="card-body">
           <div class="card-title">Livraria Lello</div>
-          <div class="card-desc">Один из красивейших книжных магазинов в мире. Неоготический интерьер, знаменитая деревянная лестница. Говорят, вдохновил Роулинг при создании Хогвартса. Билет ~€12, покупайте онлайн.</div>
-          <div class="card-note">🕘 Ежедневно 9:00–19:00 · ~€12 · Бронируйте заранее</div>
+          <div class="card-desc">Один из красивейших книжных магазинов мира — неоготический интерьер, витражный потолок и знаменитая деревянная лестница. Говорят, вдохновил Роулинг при создании Хогвартса. Покупайте билеты заранее — очереди огромные.</div>
+          <div class="card-note">🕘 Пн–Пт 9:00–19:00, Сб–Вс 9:00–19:30 · €12</div>
+          <div class="card-note">🎟️ livrarialello.pt — стоимость билета вычитается при покупке книги</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Livraria+Lello+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+            <a href="https://www.livrarialello.pt" target="_blank" class="btn-tickets">🎟️ Билеты</a>
+          </div>
         </div>
       </div>
       <div class="card">
-        <div class="card-top bg1"><span>🏛️</span><span class="badge b-navy">Обязательно</span></div>
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/palacio_da_bolsa.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-navy">Классика</span></div>
         <div class="card-body">
           <div class="card-title">Palácio da Bolsa</div>
-          <div class="card-desc">Дворец биржи XIX века с невероятным Арабским залом внутри. Только с экскурсией (~30 минут) — гиды великолепны.</div>
-          <div class="card-note">🕘 Ежедневно 9:00–18:30 · ~€14</div>
+          <div class="card-desc">Дворец биржи XIX века с ошеломительным Арабским залом — золото, лепнина и мавританские арки. Вход только с экскурсией (~30 минут), гиды великолепны. Один из красивейших интерьеров Португалии.</div>
+          <div class="card-note">🕘 Ежедневно 9:00–18:30 · €14</div>
+          <div class="card-note">🎟️ palaciodabolsa.pt · Экскурсии на португальском и английском</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Palácio+da+Bolsa+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+            <a href="https://www.palaciodabolsa.pt" target="_blank" class="btn-tickets">🎟️ Билеты</a>
+          </div>
         </div>
       </div>
       <div class="card">
-        <div class="card-top bg2"><span>🌉</span><span class="badge b-navy">Обязательно</span></div>
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/igreja_de_sao_francisco.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-gold">Потрясает</span></div>
+        <div class="card-body">
+          <div class="card-title">Igreja de São Francisco</div>
+          <div class="card-desc">Готическая церковь XIV века с интерьером, покрытым 200 кг золота — барочная резьба сплошь закрывает стены, колонны и потолок. Одно из самых впечатляющих религиозных пространств в Европе. В подвале — оссуарий.</div>
+          <div class="card-note">🕘 Ежедневно 9:00–18:00 (летом до 19:00) · €10</div>
+          <div class="card-note">🎟️ Касса на месте · Удобно совместить с Palácio da Bolsa</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Igreja+de+São+Francisco+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/se_do_porto.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-navy">Классика</span></div>
+        <div class="card-body">
+          <div class="card-title">Sé do Porto</div>
+          <div class="card-desc">Романский кафедральный собор XII века — старейшее здание города. Строгий фасад скрывает красивый клуатр с азулежу. С террасы — вид на старый город и реку. Рядом — смотровая площадка Terreiro da Sé.</div>
+          <div class="card-note">🕘 Пн–Сб 9:00–18:30, Вс 9:00–12:00 и 14:30–18:30</div>
+          <div class="card-note">💰 Собор бесплатно · Клуатр €3 · Касса на месте</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Sé+do+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="divider">Смотровые</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/torre_dos_clerigos.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-red">Лучший вид</span></div>
+        <div class="card-body">
+          <div class="card-title">Torre dos Clérigos</div>
+          <div class="card-desc">Барочная башня XVIII века — 76 м и 240 ступеней вверх. С вершины лучшая панорама Порту: красные крыши, река Douro, мост Луиша I и океан на горизонте. Рядом — красивая церковь того же ансамбля.</div>
+          <div class="card-note">🕘 Ежедневно 9:00–19:00 · Башня + церковь €8</div>
+          <div class="card-note">🎟️ Касса на месте · Вечером очереди меньше</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Torre+dos+Clérigos+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+            <a href="https://www.torredosclerigos.pt" target="_blank" class="btn-tickets">🎟️ Билеты</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/miradouro_da_vitoria.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-green">Бесплатно</span></div>
+        <div class="card-body">
+          <div class="card-title">Miradouro da Vitória</div>
+          <div class="card-desc">Уютная смотровая в жилом квартале — вид на мост Луиша I и Гайю с другого ракурса. Местные приходят сюда с вином на закате. Без туристов и без очередей. В двух шагах — бары Bairro da Vitória.</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Miradouro+da+Vitória+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/miradouro_da_serra_do_pilar.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-green">Панорама</span></div>
+        <div class="card-body">
+          <div class="card-title">Miradouro da Serra do Pilar</div>
+          <div class="card-desc">Смотровая на стороне Гайи у монастыря Serra do Pilar — 180° вид на Порту, мост Луиша I и реку. Лучшая точка для фото города. Сюда выходит верхний уровень моста после пешего перехода.</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-note">💡 Переходите мост Луиша I пешком — смотровая сразу справа</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Miradouro+da+Serra+do+Pilar+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="divider">Мосты</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/ponte_dom_luis_i.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-red">Обязательно</span></div>
+        <div class="card-body">
+          <div class="card-title">Ponte Dom Luís I</div>
+          <div class="card-desc">Двухуровневый железный мост 1886 года — символ Порту. По верхнему уровню (60 м над водой) ходит метро и пешеходы — вид захватывает дух. По нижнему — машины и пешеходы. Переход занимает ~15 минут.</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно для пешеходов</div>
+          <div class="card-note">💡 Идите по верхнему уровню — незабываемо</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Ponte+Dom+Luís+I+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/ponte_da_arabida.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-navy">Инженерия</span></div>
+        <div class="card-body">
+          <div class="card-title">Ponte da Arrábida</div>
+          <div class="card-desc">Грандиозный бетонный арочный мост 1963 года — при строительстве был крупнейшим в мире. Соединяет Порту с Гайей ближе к океану. Красив с воды и с набережной Foz do Douro. Туристов здесь почти нет.</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-note">💡 Лучший вид — с набережной со стороны Foz</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Ponte+da+Arrábida+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="divider">Ribeira и Gaia</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/ribeira.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-red">Обязательно</span></div>
         <div class="card-body">
           <div class="card-title">Ribeira</div>
-          <div class="card-desc">Живописная набережная Douro с разноцветными домами, кафе и видом на Vila Nova de Gaia. Особенно красива на закате. Здесь же отправляются лодки rabelo.</div>
+          <div class="card-desc">Исторический речной квартал — разноцветные фасады, брусчатка, кафе под открытым небом и вид на мост Луиша I. Включена в список Всемирного наследия ЮНЕСКО. Особенно красива на закате и ночью.</div>
           <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Ribeira+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
       <div class="card">
-        <div class="card-top bg3"><span>⛪</span><span class="badge b-navy">Обязательно</span></div>
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/vila_nova_de_gaia.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-gold">Портвейн</span></div>
         <div class="card-body">
-          <div class="card-title">Igreja dos Clérigos e Torre</div>
-          <div class="card-desc">Барочная церковь XVIII века с самой высокой башней Порту. 240 ступеней — и перед вами лучший вид на город и реку Douro.</div>
-          <div class="card-note">🕘 Ежедневно 9:00–19:00 · ~€8–10</div>
+          <div class="card-title">Vila Nova de Gaia</div>
+          <div class="card-desc">Другой берег Douro — десятки погребов портвейна: Graham's, Sandeman, Taylor's, Ferreira. В каждом — экскурсия и дегустация. Смотровая Gaia даёт лучший вид на Рибейру. Переходите по мосту Луиша I пешком.</div>
+          <div class="card-note">🕘 Большинство погребов 9:30–18:00 · Дегустация €10–25</div>
+          <div class="card-note">🎟️ Бронируйте через сайт выбранного погреба заранее</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Vila+Nova+de+Gaia+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
       <div class="card">
-        <div class="card-top bg4"><span>🍷</span><span class="badge b-gold">Вина</span></div>
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/barco_rabelo.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-navy">На воде</span></div>
         <div class="card-body">
-          <div class="card-title">Caves do Vinho do Porto (Gaia)</div>
-          <div class="card-desc">Переправьтесь через реку в Vila Nova de Gaia — там знаменитые погреба Graham's, Sandeman, Taylor's. Дегустация от €10–15. Белый vinho do Porto с тоником — откровение.</div>
-          <div class="card-note">🍷 Дегустация ~€10–15 · Рядом с Рибейрой</div>
+          <div class="card-title">Passeio de Barco Rabelo</div>
+          <div class="card-desc">Традиционные деревянные лодки, на которых раньше перевозили бочки портвейна по Douro. Сейчас — туристические прогулки ~50 минут под всеми мостами Порту. Отправление с набережной Ribeira и Gaia.</div>
+          <div class="card-note">🕘 Ежедневно 10:00–18:00 · ~€15 с человека</div>
+          <div class="card-note">🎟️ Билеты у причала · Бронирование не нужно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Barcos+Rabelo+Ribeira+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="divider">Районы</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/bonfim.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-green">Локальный</span></div>
+        <div class="card-body">
+          <div class="card-title">Bonfim</div>
+          <div class="card-desc">Самый модный район Порту — стрит-арт, независимые кофейни, книжные и шоурумы местных дизайнеров. Здесь живут художники и молодые профессионалы. Прогулка по Rua de Entreparedes и Rua do Bonfim обязательна.</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Bonfim+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/cedofeita.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-green">Богемный</span></div>
+        <div class="card-body">
+          <div class="card-title">Cedofeita</div>
+          <div class="card-desc">Богемный квартал с галереями, антикварными лавками и лучшими барами города. Rua de Cedofeita — главная артерия: здесь можно провести целый вечер, переходя из бара в бар. Живая музыка по пятницам и субботам.</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Cedofeita+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/foz_do_douro.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-navy">У океана</span></div>
+        <div class="card-body">
+          <div class="card-title">Foz do Douro</div>
+          <div class="card-desc">Район у слияния Douro с Атлантикой — скалы, маяк, роскошные особняки и пляж. Идеально для вечерней прогулки вдоль набережной. Трамвай №1 от Ribeira — 20 минут. Лучший закат в Порту.</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-note">💡 Трамвай №1 от Infante — €3.50 в одну сторону</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Foz+do+Douro+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="divider">Скрытые жемчужины</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/mercado_do_bolhao.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-gold">Рынок</span></div>
+        <div class="card-body">
+          <div class="card-title">Mercado do Bolhão</div>
+          <div class="card-desc">Исторический крытый рынок XIX века после реставрации — свежая рыба, мясо, сыры, цветы и местная еда. Атмосфера настоящего португальского рынка. Поешьте здесь — дешевле и вкуснее туристических ресторанов.</div>
+          <div class="card-note">🕘 Пн–Пт 8:00–20:00, Сб 8:00–17:00 · Вход бесплатный</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Mercado+do+Bolhão+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/estacao_de_sao_bento.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-navy">Жемчужина</span></div>
+        <div class="card-body">
+          <div class="card-title">Estação de São Bento</div>
+          <div class="card-desc">Железнодорожный вокзал начала XX века — внутри 20 000 азулежу с историей Португалии. Один из красивейших вокзалов мира. Вход свободный — зайдите посмотреть, даже если не едете на поезде.</div>
+          <div class="card-note">🕘 Ежедневно 8:00–23:00 · Вход бесплатный</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Estação+de+São+Bento+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/capela_das_almas.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-navy">Жемчужина</span></div>
+        <div class="card-body">
+          <div class="card-title">Capela das Almas</div>
+          <div class="card-desc">Часовня XVIII века, полностью облицованная синими азулежу снаружи — 15 947 плиток с житием святых. Один из лучших примеров португальской плиточной живописи. Фасад потрясает.</div>
+          <div class="card-note">🕘 Пн–Пт 8:00–18:00, Сб 9:00–18:00, Вс 10:00–18:00 · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Capela+das+Almas+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/jardins_do_palacio_de_cristal.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-green">Парк</span></div>
+        <div class="card-body">
+          <div class="card-title">Jardins do Palácio de Cristal</div>
+          <div class="card-desc">Романтичные сады XIX века с павлинами, фонтанами и видом на реку Douro и Gaia. Идеально для отдыха в середине дня. Туристов здесь немного — приятная альтернатива шумному центру.</div>
+          <div class="card-note">🕘 Ежедневно 8:00–21:00 (летом) · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Jardins+do+Palácio+de+Cristal+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/rua_das_flores.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-green">Прогулка</span></div>
+        <div class="card-body">
+          <div class="card-title">Rua das Flores</div>
+          <div class="card-desc">Пешеходная улочка в историческом центре с ювелирными мастерскими, кондитерскими и кафе. Отреставрированные фасады с азулежу, живые музыканты. Лучший маршрут от Sé до Ribeira.</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Rua+das+Flores+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="divider">Чуть дальше</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/praia_de_matosinhos.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-navy">Пляж</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia de Matosinhos</div>
+          <div class="card-desc">Лучший городской пляж рядом с Порту — широкий, с чистым песком и ресторанами морепродуктов прямо на набережной. Метро линия A до Matosinhos Sul — 20 минут от центра. Рядом — рыбный рынок Lota.</div>
+          <div class="card-note">🕐 Всегда открыто · Пляж бесплатно</div>
+          <div class="card-note">💡 Метро линия A, €1.85 · Попробуйте grelhado прямо здесь</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+de+Matosinhos+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/parque_serralves.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-green">Искусство</span></div>
+        <div class="card-body">
+          <div class="card-title">Parque Serralves</div>
+          <div class="card-desc">Выдающийся музей современного искусства архитектора Álvaro Siza Vieira в окружении 18 га садов в стиле ар-деко. Сильные временные выставки. Парк можно посетить отдельно — приятная прогулка.</div>
+          <div class="card-note">🕘 Пн–Пт 10:00–19:00, Сб–Вс 10:00–20:00 · Музей + парк €20 · Только парк €5</div>
+          <div class="card-note">🎟️ serralves.pt · Автобус №201 от центра</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Parque+Serralves+Porto+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+            <a href="https://www.serralves.pt" target="_blank" class="btn-tickets">🎟️ Билеты</a>
+          </div>
         </div>
       </div>
     </div>
@@ -222,7 +508,7 @@
     <div class="city-banner sintra">
       <span class="city-banner-emoji">🏰</span>
       <div class="city-banner-text">
-        <h3>Sintra</h3>
+        <h3>Синтра</h3>
         <p>Однодневная поездка · ~40 минут на электричке из Rossio</p>
       </div>
     </div>
@@ -236,6 +522,10 @@
           <div class="card-desc">Самый красочный дворец Португалии — жёлто-красные романтические башни на вершине горы в густом лесу. Построен в XIX веке по приказу короля Фернанду II. Внутри — роскошные королевские интерьеры эпохи.</div>
           <div class="card-note">🕘 9:30–19:00 · Дворец + парк €17.50 · Только парк €8</div>
           <div class="card-note">🎟️ Бронируйте на parquesdesintra.pt — в мае очереди огромные!</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Palácio+da+Pena+Sintra+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+            <a href="https://www.parquesdesintra.pt" target="_blank" class="btn-tickets">🎟️ Билеты</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -245,6 +535,10 @@
           <div class="card-desc">Мавританские крепостные стены VIII–IX веков, протянувшиеся по гребню скал. Отсюда открывается лучшая панорама Синтры — дворец Пена, леса и полоска океана на горизонте. Можно ходить прямо по стенам.</div>
           <div class="card-note">🕘 9:30–20:00 · €8</div>
           <div class="card-note">🎟️ parquesdesintra.pt · Удобно купить комбо с Пеной</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Castelo+dos+Mouros+Sintra+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+            <a href="https://www.parquesdesintra.pt" target="_blank" class="btn-tickets">🎟️ Билеты</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -254,6 +548,10 @@
           <div class="card-desc">Таинственная вилла начала XX века с готическими башнями, масонской символикой и знаменитым инициатическим колодцем — по спиральной лестнице спускаешься глубоко в землю. Самое атмосферное место Синтры.</div>
           <div class="card-note">🕘 9:30–20:00 · €15</div>
           <div class="card-note">🎟️ regaleira.pt · Можно купить на входе, но лучше заранее</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Quinta+da+Regaleira+Sintra+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+            <a href="https://www.regaleira.pt" target="_blank" class="btn-tickets">🎟️ Билеты</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -263,6 +561,10 @@
           <div class="card-desc">Главный королевский дворец прямо в центре города — узнаётся по двум огромным коническим трубам кухни. Один из лучших сохранившихся средневековых дворцов Португалии с мавританскими и мануэлинскими интерьерами.</div>
           <div class="card-note">🕘 9:30–19:00 · €10</div>
           <div class="card-note">🎟️ parquesdesintra.pt · Можно купить на месте</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Palácio+Nacional+de+Sintra+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+            <a href="https://www.parquesdesintra.pt" target="_blank" class="btn-tickets">🎟️ Билеты</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -272,6 +574,10 @@
           <div class="card-desc">Романтичный дворец в мавританско-готическом стиле, окружённый огромным ботаническим парком с растениями со всего мира. Значительно тише, чем Пена — толпы сюда почти не доходят. Отличное место для неспешной прогулки.</div>
           <div class="card-note">🕘 9:30–19:00 · €8</div>
           <div class="card-note">🎟️ parquesdesintra.pt · Обычно без очереди</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Palácio+de+Monserrate+Sintra+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+            <a href="https://www.parquesdesintra.pt" target="_blank" class="btn-tickets">🎟️ Билеты</a>
+          </div>
         </div>
       </div>
     </div>
@@ -285,6 +591,9 @@
           <div class="card-desc">Самая западная точка континентальной Европы — скалы высотой 140 м над Атлантикой. Маяк, крест и бескрайний океан. Из Синтры автобус №403 (~35 мин, ~€2.55 в одну сторону). Удобный маршрут: Sintra → Cabo da Roca → Cascais автобусом → Лиссабон электричкой.</div>
           <div class="card-note">🕘 Всегда открыто · Вход бесплатный</div>
           <div class="card-note">🎟️ Сертификат «конца света» ~€12 — в туристическом центре на месте</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Cabo+da+Roca+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -294,6 +603,9 @@
           <div class="card-desc">Легендарная кондитерская — родина Travesseiro de Sintra (слоёное тесто с миндальным кремом) и queijada (сырный тарт). Берите тёплыми прямо из печи. Очередь на улице — нормальное явление, движется быстро. Закрыта по четвергам.</div>
           <div class="card-note">🕘 8:00–22:00 · Закрыта по четвергам</div>
           <div class="card-note">💰 Travesseiro ~€1.50 · Queijada ~€1.30 · Билеты не нужны</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Casa+Piriquita+Sintra+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
         </div>
       </div>
     </div>
@@ -343,42 +655,6 @@
           <div class="exp-tags">
             <span class="tag t-red">€1,35 в одну сторону</span>
             <span class="tag t-navy">От Cais do Sodré</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-icon ic4">🍷</div>
-        <div class="exp-body">
-          <div class="exp-title">Дегустация вин</div>
-          <div class="exp-desc">By the Wine в Chiado — заведение целиком для португальских вин. В Порту — знаменитые погреба Graham's, Sandeman, Taylor's в Vila Nova de Gaia. Белый vinho do Porto с тоником со льдом — откровение.</div>
-          <div class="exp-tags">
-            <span class="tag t-red">By the Wine, Chiado</span>
-            <span class="tag t-gold">Дегустация в Порту ~€10–15</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-icon ic3">🚴</div>
-        <div class="exp-body">
-          <div class="exp-title">Тур на электровелосипеде</div>
-          <div class="exp-desc">По холмам Лиссабона на обычном велосипеде тяжело — на электро это одно удовольствие. Туры 3–4 часа: Alfama, Belém, набережная, смотровые. Отличный способ охватить много за день.</div>
-          <div class="exp-tags">
-            <span class="tag t-red">~€35–45 с человека</span>
-            <span class="tag t-navy">Lisbon Bike Tour · Bike Iberia</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-icon ic1">🎨</div>
-        <div class="exp-body">
-          <div class="exp-title">Мастер-класс по росписи изразцов</div>
-          <div class="exp-desc">Научитесь расписывать знаменитые португальские изразцы azulejos и увезите домой собственноручно сделанный сувенир. Отличное занятие для двоих — 1,5–2 часа.</div>
-          <div class="exp-tags">
-            <span class="tag t-red">~€30–40 с человека</span>
-            <span class="tag t-navy">1,5–2 часа · GetYourGuide</span>
           </div>
         </div>
       </div>
@@ -772,6 +1048,196 @@
           </div>
         </div>
 
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════ PANEL: BEACHES ══════════ -->
+<div class="panel" id="panel-beaches">
+  <div class="content">
+    <p class="sec-label">Солнце и океан</p>
+    <h2 class="sec-title">Лучшие <em>пляжи</em> Португалии</h2>
+
+    <p class="divider">Рядом с Лиссабоном</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_carcavelos.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-red">Самый близкий</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia de Carcavelos</div>
+          <div class="card-desc">Самый популярный и доступный пляж рядом с Лиссабоном — широкий, с золотым песком и хорошими волнами для серфинга. Отличная инфраструктура: школы серфинга, рестораны, бары прямо у воды. Любимый пляж лиссабонцев на выходных.</div>
+          <div class="card-note">🚆 Электричка Cais do Sodré → Carcavelos · ~25 мин · €2.10</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+de+Carcavelos+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_guincho.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-warn">Дикий</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia do Guincho</div>
+          <div class="card-desc">Дикий атлантический пляж в 10 км от Каскайша — широкий, продуваемый ветром, с драматическими дюнами и видом на Cabo da Roca. Любимое место серферов и кайтеров. Людей мало даже летом. Один из самых живописных в стране.</div>
+          <div class="card-note">🚌 Автобус №405 из Cascais · ~20 мин · или такси ~€15</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно · Сильный ветер — берите куртку</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+do+Guincho+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_caparica.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-green">Местный</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia da Caparica</div>
+          <div class="card-desc">Огромный песчаный пляж длиной 30 км — любимый пляж лиссабонцев. Вдоль берега — десятки пронумерованных участков с разным характером: семейные, молодёжные, для серфинга. Летом работает мини-поезд вдоль пляжа.</div>
+          <div class="card-note">🚌 Паром Cais do Sodré → Cacilhas + автобус · ~50 мин · ~€3.50</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+da+Caparica+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_sesimbra.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-green">Бирюза</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia de Sesimbra</div>
+          <div class="card-desc">Тихий рыбацкий городок к югу от Лиссабона с бирюзовой тёплой водой и уютным пляжем в бухте. Над городом — мавританская крепость. Отличная свежая рыба в ресторанах прямо у воды. Меньше туристов, чем в Каскайше.</div>
+          <div class="card-note">🚌 Автобус TST от Praça de Espanha · ~1 ч · ~€4</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+de+Sesimbra+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_arrabida.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-red">Лучший</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia de Portinho da Arrábida</div>
+          <div class="card-desc">Один из красивейших пляжей Португалии — укрытая бухта с ослепительно голубой водой, белым песком и скалами природного парка Аррабида. Вода тёплая и прозрачная. Летом въезд на машинах ограничен — берите автобус или экскурсию.</div>
+          <div class="card-note">🚌 Тур из Лиссабона или автобус TST + такси · ~1.5 ч · лучше с гидом</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно · Летом ограничен въезд авто</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+de+Portinho+da+Arrábida+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_galapinhos.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-green">Скрытый</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia dos Galapinhos</div>
+          <div class="card-desc">Один из самых диких и красивых пляжей Португалии — попасть можно только пешком (~20 мин по тропе) или на лодке. Кристально чистая вода в укрытой бухте природного парка. Удобств нет — берите воду и еду с собой. Того стоит.</div>
+          <div class="card-note">🚶 Пеший маршрут ~20 мин от парковки Serra da Arrábida · или на лодке из Sesimbra</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно · Только для подготовленных</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+dos+Galapinhos+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="divider">Рядом с Синтрой и Каскайшем</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_praia_grande.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-navy">Серфинг</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia Grande</div>
+          <div class="card-desc">Большой атлантический пляж с мощными волнами — популярен у серферов и бодибордеров. Широкий, открытый, с внушительными скалами по краям. Рядом с Синтрой. Есть школы серфинга и аренда досок прямо на пляже.</div>
+          <div class="card-note">🚌 Автобус №441 из Sintra · ~20 мин · ~€2</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно · Флаги безопасности обязательны</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+Grande+Sintra+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_macas.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-gold">Трамвай</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia das Maçãs</div>
+          <div class="card-desc">Небольшой уютный пляж в деревне Маsaș у подножия скал. Сюда можно добраться на историческом трамвае из Синтры — отдельное удовольствие. Рыбные рестораны прямо на набережной. Спокойная семейная атмосфера.</div>
+          <div class="card-note">🚃 Исторический трамвай из Sintra · ~45 мин · ~€3 или автобус №441</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+das+Maçãs+Sintra+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_adraga.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-warn">Дикий</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia da Adraga</div>
+          <div class="card-desc">Один из самых живописных диких пляжей Португалии — укрыт высокими скалами, дикий и малолюдный. Знаменит фантастическими закатами. Рядом — легендарный ресторан прямо у скал. Попасть сложнее — зато публика вменяемая.</div>
+          <div class="card-note">🚌 Автобус №441 из Sintra до Almoçageme + пешком ~20 мин · или такси ~€12</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно · Парковка ограничена</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+da+Adraga+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_rainha.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-navy">В центре</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia da Rainha</div>
+          <div class="card-desc">Небольшой живописный пляж прямо в центре Каскайша — уютная бухта, защищённая от ветра, с спокойной водой. Рядом — старый рыбацкий порт, рестораны и исторический центр города. Идеально совместить с прогулкой по Каскайшу.</div>
+          <div class="card-note">🚆 Электричка Cais do Sodré → Cascais · ~40 мин · €2.45</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+da+Rainha+Cascais+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="divider">Рядом с Порту</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/praia_de_matosinhos.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-green">Городской</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia de Matosinhos</div>
+          <div class="card-desc">Лучший городской пляж рядом с Порту — широкий, с чистым песком и ресторанами морепродуктов прямо на набережной. Волны подходят для серфинга. Рядом — знаменитый рыбный рынок Lota. Самый удобный пляж для дня из Порту.</div>
+          <div class="card-note">🚇 Метро линия A до Matosinhos Sul · ~20 мин · €1.85</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+de+Matosinhos+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_miramar.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-gold">Часовня</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia de Miramar</div>
+          <div class="card-desc">Уютный пляж к югу от Порту, знаменитый часовней Senhor da Pedra — она стоит прямо на скалах над океаном и выглядит совершенно сюрреалистично. Один из самых фотографируемых видов Португалии. Тихо, без суеты.</div>
+          <div class="card-note">🚆 Электричка Urbano до Miramar · ~25 мин · ~€2.50 · или автобус</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+de+Miramar+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_aguda.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-navy">Тихий</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia de Aguda</div>
+          <div class="card-desc">Спокойный пляж к югу от Порту с хорошей инфраструктурой и приятной набережной. Меньше людей, чем в Матозиньюш, более расслабленная атмосфера. Рядом есть небольшой аквариум. Хорош для неспешного дня у моря.</div>
+          <div class="card-note">🚆 Электричка Urbano до Aguda · ~35 мин · ~€3</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+de+Aguda+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/beach_espinho.png" style="width:100%;height:100%;object-fit:cover;"><span class="badge b-navy">Серфинг</span></div>
+        <div class="card-body">
+          <div class="card-title">Praia de Espinho</div>
+          <div class="card-desc">Большой широкий пляж в курортном городке Эспинью — хорошие волны для серфинга, длинная набережная и оживлённый променад. Есть казино, рестораны и кафе. Популярен у жителей Порту на выходных.</div>
+          <div class="card-note">🚆 Электричка Urbano до Espinho · ~40 мин · ~€3.20</div>
+          <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Praia+de+Espinho+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
       </div>
     </div>
 

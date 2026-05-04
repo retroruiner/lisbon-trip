@@ -467,6 +467,39 @@ body {
   .food-grid { grid-template-columns: 1fr; }
 }
 
+/* ─── ITINERARY ─── */
+.itin-grid { display: flex; flex-direction: column; gap: 16px; }
+
+.itin-day { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+
+.itin-head { padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; }
+.itin-head.h-arrive { background: #1E2D3D; }
+.itin-head.h-lisbon { background: linear-gradient(135deg,#C4673A,#9e4a28); }
+.itin-head.h-porto  { background: linear-gradient(135deg,#4a1a6b,#7B3FAF); }
+.itin-head.h-sintra { background: linear-gradient(135deg,#1a4a2e,#2d7a4a); }
+.itin-head.h-back   { background: linear-gradient(135deg,#2E4259,#3d5a7a); }
+
+.itin-head-date { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 3px; }
+.itin-head-title { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 600; color: #fff; }
+.itin-head-pill { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; background: rgba(255,255,255,0.18); color: #fff; white-space: nowrap; }
+
+.itin-body { padding: 16px 20px 4px; }
+
+.itin-item { display: grid; grid-template-columns: 44px 16px 1fr; column-gap: 10px; }
+.itin-time { font-size: 11px; font-weight: 700; color: #C4673A; padding-top: 3px; text-align: right; }
+.itin-spine { display: flex; flex-direction: column; align-items: center; }
+.itin-dot { width: 8px; height: 8px; border-radius: 50%; background: #C4673A; margin-top: 5px; flex-shrink: 0; }
+.itin-line { width: 2px; flex: 1; background: #e5ddd0; margin-top: 4px; min-height: 12px; }
+.itin-item:last-child .itin-line { display: none; }
+.itin-content { padding-bottom: 14px; }
+.itin-item:last-child .itin-content { padding-bottom: 16px; }
+.itin-act { font-size: 13.5px; font-weight: 600; color: #1E2D3D; line-height: 1.3; padding-top: 1px; }
+.itin-tip { font-size: 12px; color: #888; line-height: 1.5; margin-top: 2px; }
+.itin-warn { font-size: 11px; color: #C4673A; font-weight: 600; margin-top: 3px; }
+
+.itin-day-alert { background: #FEF3CD; border-left: 3px solid #e8c97a; border-radius: 0 8px 8px 0; padding: 8px 12px; font-size: 12px; color: #7a5a1a; margin-bottom: 14px; line-height: 1.5; }
+.itin-day-note { background: #e8eef5; border-left: 3px solid #1E2D3D; border-radius: 0 8px 8px 0; padding: 8px 12px; font-size: 12px; color: #1E2D3D; margin-bottom: 14px; line-height: 1.5; }
+
 /* ─── CITY SUBTABS ─── */
 .city-tabs {
   display: flex;

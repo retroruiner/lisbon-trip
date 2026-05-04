@@ -15,17 +15,316 @@
   <div class="header-pills">
     <span class="header-pill">✈ Прилёт 6 мая · 16:45</span>
     <span class="header-pill">📍 База — Лиссабон</span>
-    <span class="header-pill">✈ Отлёт 11 мая</span>
+    <span class="header-pill">✈ Отлёт 12 мая</span>
   </div>
 </header>
 
 <!-- TAB BAR -->
 <div class="tabbar">
+  <button class="tab" onclick="switchTab('itinerary', this)">📅 Маршрут</button>
   <button class="tab active" onclick="switchTab('places', this)">📍 Места</button>
   <button class="tab" onclick="switchTab('exp', this)">✨ Активности</button>
   <button class="tab" onclick="switchTab('food', this)">🍽️ Еда и напитки</button>
   <button class="tab" onclick="switchTab('transport', this)">🚇 Транспорт</button>
   <button class="tab" onclick="switchTab('beaches', this)">🏖️ Пляжи</button>
+</div>
+
+<!-- ══════════ PANEL: ITINERARY ══════════ -->
+<div class="panel" id="panel-itinerary">
+  <div class="content">
+    <p class="sec-label">Лиссабон · Май 2026</p>
+    <h2 class="sec-title">День за <em>днём</em></h2>
+
+    <div class="alert">
+      ⚠️ <span><strong>Mosteiro dos Jerónimos</strong> — билеты нужно купить заранее онлайн. <strong>Feira da Ladra</strong> — только наличные. <strong>Oceanário</strong> — тоже лучше бронировать онлайн.</span>
+    </div>
+
+    <div class="itin-grid">
+
+      <!-- MAY 6 -->
+      <div class="itin-day">
+        <div class="itin-head h-arrive">
+          <div>
+            <div class="itin-head-date">6 мая · среда</div>
+            <div class="itin-head-title">Прилёт ✈</div>
+          </div>
+          <div class="itin-head-pill">Вечер</div>
+        </div>
+        <div class="itin-body">
+          <div class="itin-item">
+            <div class="itin-time">~19:00</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Заселение в отель</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">~20:00</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Praça do Comércio</div>
+              <div class="itin-tip">Вечерняя набережная, арка Руа Аугушта — красиво с подсветкой</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">~21:00</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Ужин в Байше или Шиаду</div>
+              <div class="itin-tip">Если есть силы — Miradouro de Santa Catarina: вечерняя атмосфера, уличные музыканты</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAY 7 -->
+      <div class="itin-day">
+        <div class="itin-head h-lisbon">
+          <div>
+            <div class="itin-head-date">7 мая · четверг</div>
+            <div class="itin-head-title">Белем + Шиаду</div>
+          </div>
+          <div class="itin-head-pill">Полный день</div>
+        </div>
+        <div class="itin-body">
+          <div class="itin-day-alert">⚠️ Jerónimos и Padrão dos Descobrimentos <strong>закрыты по понедельникам</strong> — их нужно посетить именно сегодня.</div>
+          <div class="itin-item">
+            <div class="itin-time">09:30</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Выезд в Белем</div>
+              <div class="itin-tip">Автобус 727 от остановки у Marquês de Pombal — идёт прямо до Белема, ~30 минут</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">10:00</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Mosteiro dos Jerónimos · ~2 часа · €27</div>
+              <div class="itin-tip">ЮНЕСКО, готический клуатр, мануэлинская архитектура</div>
+              <div class="itin-warn">🎟️ Билеты заранее онлайн — в мае огромные очереди без брони</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">12:00</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Padrão dos Descobrimentos · ~45 мин · €10</div>
+              <div class="itin-tip">Монумент в форме каравеллы, смотровая с видом на Tejo</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">12:50</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Torre de Belém · фото снаружи</div>
+              <div class="itin-tip">Реконструкция — внутрь могут не пустить, набережная отличная</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">13:20</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Обед — Pastéis de Belém</div>
+              <div class="itin-tip">Kultовая пекарня прямо у Jerónimos — настоящий pastel de nata из оригинальной печи с 1837 года</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">15:00</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">LX Factory</div>
+              <div class="itin-tip">По пути обратно в центр — магазины, стрит-арт, кофе</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">16:30</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Jardim da Estrela</div>
+              <div class="itin-tip">Сад с уточками, вековые деревья — хорошо отдохнуть после насыщенного утра</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">18:00</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Miradouro de Santa Catarina · закат</div>
+              <div class="itin-tip">Статуя Адамастора, местные с пивом, уличные музыканты</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">19:30</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Ужин в Шиаду или Байрру-Алту</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAY 8-9 -->
+      <div class="itin-day">
+        <div class="itin-head h-porto">
+          <div>
+            <div class="itin-head-date">8–9 мая · пятница–суббота</div>
+            <div class="itin-head-title">Порту 🍷</div>
+          </div>
+          <div class="itin-head-pill">2 дня</div>
+        </div>
+        <div class="itin-body">
+          <div class="itin-day-note">🚂 Поезд Alfa Pendular из Lisboa Oriente · ~3 часа · советуем бронировать заранее на cp.pt</div>
+          <div class="itin-item">
+            <div class="itin-time">9 мая</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Возвращение в Лиссабон · ~18:00</div>
+              <div class="itin-tip">Вечер свободный — лёгкая прогулка по Шиаду, ужин, отдых перед Синтрой</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAY 10 -->
+      <div class="itin-day">
+        <div class="itin-head h-sintra">
+          <div>
+            <div class="itin-head-date">10 мая · воскресенье</div>
+            <div class="itin-head-title">Синтра 🏰</div>
+          </div>
+          <div class="itin-head-pill">День + вечер Лиссабон</div>
+        </div>
+        <div class="itin-body">
+          <div class="itin-day-alert">⚠️ В воскресенье в Синтре очень много туристов — выезжайте как можно раньше, до 9 утра.</div>
+          <div class="itin-item">
+            <div class="itin-time">~17:00</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Возвращение в Лиссабон</div>
+              <div class="itin-tip">Если не успели — Jardim da Estrela в шаговой доступности от центра. Или просто отдых перед насыщенным завтра.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAY 11 -->
+      <div class="itin-day">
+        <div class="itin-head h-lisbon">
+          <div>
+            <div class="itin-head-date">11 мая · понедельник</div>
+            <div class="itin-head-title">Океанариум + Алфама</div>
+          </div>
+          <div class="itin-head-pill">Полный день</div>
+        </div>
+        <div class="itin-body">
+          <div class="itin-day-note">✅ Jerónimos и Padrão сегодня закрыты — но вы уже были там в четверг. Оба района — восток города, удобно за один день.</div>
+          <div class="itin-item">
+            <div class="itin-time">09:30</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Метро до Parque das Nações · ст. Oriente</div>
+              <div class="itin-tip">От отеля: жёлтая линия → São Sebastião → пересадка на красную → Oriente, ~25 минут</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">10:00</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Oceanário de Lisboa · ~2.5 часа · €25</div>
+              <div class="itin-tip">Один из лучших аквариумов мира — выдры, пингвины, тупики, огромный центральный резервуар</div>
+              <div class="itin-warn">🎟️ Билеты купить заранее онлайн</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">12:30</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Прогулка по Parque das Nações</div>
+              <div class="itin-tip">Футуристическая архитектура Экспо-98, красивая набережная Tejo — бесплатно</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">13:30</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Обед в Parque das Nações, потом метро обратно</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">14:30</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Sé de Lisboa · ~30 мин · бесплатно</div>
+              <div class="itin-tip">Старейший собор 1147 года, готический клуатр ~€4</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">15:00</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Трамвай 28 + прогулка по Алфаме</div>
+              <div class="itin-tip">Садитесь у Sé — мощёные переулки, изразцовые дома, фаду из дверей</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">16:30</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Castelo de São Jorge · ~2 часа · €15</div>
+              <div class="itin-tip">Панорама 360°, павлины на территории, скачайте бесплатный аудиогид</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">18:30</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Miradouro da Graça · вечер</div>
+              <div class="itin-tip">Лучший вид на замок в городе, киоск с пивом — закат в мае около 21:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAY 12 -->
+      <div class="itin-day">
+        <div class="itin-head h-back">
+          <div>
+            <div class="itin-head-date">12 мая · вторник</div>
+            <div class="itin-head-title">Последний день</div>
+          </div>
+          <div class="itin-head-pill">Отлёт вечером</div>
+        </div>
+        <div class="itin-body">
+          <div class="itin-day-alert">👋 Партнёр уезжает рано утром. День соло.</div>
+          <div class="itin-item">
+            <div class="itin-time">~09:00</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Feira da Ladra · блошиный рынок</div>
+              <div class="itin-tip">Вторник ✓ — работает до ~14:00, лучше прийти пораньше. Изразцы, книги, винил, винтаж.</div>
+              <div class="itin-warn">💵 Только наличные!</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">~12:00</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Свободное время · последняя прогулка</div>
+              <div class="itin-tip">Шиаду, кофе, сувениры — всё что не успели</div>
+            </div>
+          </div>
+          <div class="itin-item">
+            <div class="itin-time">Вечер</div>
+            <div class="itin-spine"><div class="itin-dot"></div><div class="itin-line"></div></div>
+            <div class="itin-content">
+              <div class="itin-act">Отлёт ✈</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 <!-- ══════════ PANEL: PLACES ══════════ -->
@@ -70,6 +369,17 @@
         </div>
       </div>
       <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/se_de_lisboa.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Sé de Lisboa</div>
+          <div class="card-desc">Старейший собор Лиссабона (1147 год) — суровая романская крепость у подножия Алфамы. По пути к замку или трамваю 28. Готический клуатр стоит отдельного захода.</div>
+          <div class="card-note">🕙 Пн–Сб 10:00–18:00, Вс 14:00–17:00 · Собор бесплатно · Клуатр ~€4</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Sé+de+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
         <div class="card-top" style="padding:0;background:#000;"><img src="images/jeronimos.png" style="width:100%;height:100%;object-fit:cover;"></div>
         <div class="card-body">
           <div class="card-title">Mosteiro dos Jerónimos</div>
@@ -90,6 +400,17 @@
           <div class="card-actions">
             <a href="https://www.google.com/maps/search/?api=1&query=Torre+de+Belém+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
             
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/padrao_dos_descobrimentos.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Padrão dos Descobrimentos</div>
+          <div class="card-desc">56-метровый монумент в форме каравеллы с 33 фигурами португальских первооткрывателей. Стоит прямо рядом с Башней Белема. Внутри — смотровая с видом на Tejo.</div>
+          <div class="card-note">🚫 Закрыт по понедельникам · Вт–Вс 10:00–19:00 · ~€10</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Padrão+dos+Descobrimentos+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
           </div>
         </div>
       </div>
@@ -150,6 +471,17 @@
           <div class="card-note">🕐 Всегда открыто · Бесплатно</div>
           <div class="card-actions">
             <a href="https://www.google.com/maps/search/?api=1&query=Miradouro+da+Graça+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top" style="padding:0;background:#000;"><img src="images/miradouro_santa_catarina.png" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="card-body">
+          <div class="card-title">Miradouro de Santa Catarina</div>
+          <div class="card-desc">Лучшая точка Лиссабона для заката — статуя Адамастора, местные с пивом, уличные музыканты. Атмосфернее любой туристической смотровой. Район Шиаду.</div>
+          <div class="card-note">🌅 Лучше всего вечером · Бесплатно</div>
+          <div class="card-actions">
+            <a href="https://www.google.com/maps/search/?api=1&query=Miradouro+de+Santa+Catarina+Lisboa+Portugal" target="_blank" class="btn-map">📍 Google Maps</a>
           </div>
         </div>
       </div>
